@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Mercado</title>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.0/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666666;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #resultado {
+      color: #333333;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CALCULADORA DE MERCADO</h1>
+
+  <p id="data-hora"></p>
+
+  <form>
+    <label for="nome">Nome do Produto:</label>
+    <input type="text" id="nome" required>
+    
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" required>
+    
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" required>
+    
+    <button type="button" id="adicionarBtn">Adicionar Produto</button>
+  </form>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Nome do Produto</th>
+        <th>Quantidade</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista-produtos">
+    </tbody>
+  </table>
+  
+  <p id="resultado"></p>
+  
+  <button type="button" id="calcularTotalBtn">Calcular Total</button>
+  
+  <button type="button" id="exportarListaBtn">Exportar Lista</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function adicionarProduto() {
+        console.log("Função adicionarProduto chamada");
+      }
+
+      function calcularTotal() {
+        console.log("Função calcularTotal chamada");
+      }
+
+      function exportarLista() {
+        // ... código exportarLista ...
+      }
+
+      function obterListaDeProdutos() {
+        // ... código obterListaDeProdutos ...
+      }
+
+      function exibirDataHora() {
+        function atualizarHora() {
+          var agora = new Date();
+          var dataHoraFormatada = agora.toLocaleString();
+          document.getElementById("data-hora").textContent = "Data e Hora: " + dataHoraFormatada;
+        }
+
+        // Atualizar a hora a cada segundo
+        setInterval(atualizarHora, 1000);
+
+        // Chamar a função imediatamente para exibir a hora inicial
+        atualizarHora();
+      }
+
+      // Vincule as funções aos botões
+      document.getElementById("adicionarBtn").addEventListener("click", adicionarProduto);
+      document.getElementById("calcularTotalBtn").addEventListener("click", calcularTotal);
+      document.getElementById("exportarListaBtn").addEventListener("click", exportarLista);
+
+      // Chamar a função para exibir data e hora
+      exibirDataHora();
+    });
+  </script>
+</body>
+</html>
