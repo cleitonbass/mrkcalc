@@ -16,9 +16,9 @@ Quero agradecer a todos que usarem esse projeto, podem ficar a vontade para clon
 
 #### Screenshot:  
 
-![screeshot 01](https://github.com/cleitonbass/mrkcalc/assets/01.png)
+![screeshot 01](https://github.com/cleitonbass/mrkcalc/blob/main/assets/01.png)  
 
-![screeshot 02](https://github.com/cleitonbass/mrkcalc/assets/02.png) 
+![screeshot 02](https://github.com/cleitonbass/mrkcalc/blob/main/assets/02.png)  
 
 ***  
 
